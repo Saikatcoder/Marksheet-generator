@@ -1,6 +1,7 @@
 window.onload = () => {
     let addSubjectButton = document.getElementById('btn');
 
+    // adding subject div
     addSubjectButton.onclick = () => {
         
         let subjectdiv = document.createElement('div');
@@ -36,4 +37,13 @@ window.onload = () => {
         let marksheetForm = document.getElementById('dynamic-area');
         marksheetForm.append(subjectdiv);
     };
+
+    // preview student image
+    let studentImageInput = document.getElementById('student-img-input');
+    let studentImg = document.getElementById('student-img')
+    studentImageInput.onchange = (event)=>{
+      let file = event.target.files[0];
+     let url = URL.createObjectURL(file);
+      studentImg.src = url;
+    }
 };
