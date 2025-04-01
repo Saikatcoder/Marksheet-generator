@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: black;
+    color: #fefefe;
+}
+.main{
+     width: 100%;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 32px 24px;
+}
+
+.title{
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    /* margin-top: 20px; */
+    border-bottom: 8px solid yellowgreen;
+    border-radius: 20px;
+}
+#form-box{
+    display: flex;
+    gap: 24px;
+    flex-grow: 1;
+}
+#form-card{
+    width: 100%;
+    /* border: 2px solid white; */
+    margin: 24px 0;
+    padding: 16px;
+}
+#marsheet-form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.form-group{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 6px;
+}
+#marsheet-form label{
+    font-size: 18px;
+    font-weight: 500;
+    color:greenyellow;
+}
+#marsheet-form input{
+    border: none;
+    padding: 10px;
+    background-color: transparent;
+    border-bottom: 1px solid white;
+    color: #fefefe;
+    font-size: 16px;
+    flex-grow: 1;
+}
+
+.underline{
+    border-bottom: 2px solid yellowgreen;
+    width: 25%;
+}
+#btn{
+    border: none;
+    background-color: greenyellow;
+    font-size: 1rem;
+    /* height: 35px; */
+    border-radius: 5px;
+    width: fit-content;
+    padding: 16px 20px ;
+    gap: 10px;
+}
+#btn:hover{
+    background-color: rgb(117, 179, 24);
+    color: #fefefe;
+}
+#generate{
+    border: none;
+    background-color: greenyellow;
+    font-size: 1rem;
+    border-radius: 5px;
+    padding: 10px 15px ;
+}
+#generate:hover{
+    background-color: rgb(117, 179, 24);
+    color: #fefefe;
+}
+table{
+    margin-top: 32px;
+}
+th,td{
+    border: 1px solid greenyellow;
+    padding: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 700px) {
+    #form-box {
+        flex-direction: column;
+        gap: 16px;
+    }
+    #marsheet-form input {
+        font-size: 14px;
+        padding: 8px;
+    }
+    .title {
+        font-size: 1.5rem;
+        border-bottom: 5px solid yellowgreen;
+    }
+    #btn, #generate {
+        width: 100%;
+        text-align: center;
+        padding: 12px 16px;
+    }
+    table {
+        font-size: 14px;
+        width: 100%;
+    }
+    th, td {
+        padding: 8px;
+    }
+}
