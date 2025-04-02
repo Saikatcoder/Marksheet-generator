@@ -100,30 +100,63 @@ th,td{
     margin: 0;
     margin-bottom: 16px;
 }
+#student-img{
+    width: 100%;
+}
+.copyright{
+    text-align: center;
+    font-size: 15px;
+    margin-top: 10px;
+}
+.warning{
+    display: block;
+    text-align: center;
+    color: gray;
+}
+
+/* Responsive Design */
 /* Responsive Design */
 @media (max-width: 700px) {
+    .main {
+        padding: 16px;
+    }
+    
     #form-box {
         flex-direction: column;
         gap: 16px;
     }
+    
     #marsheet-form input {
         font-size: 14px;
         padding: 8px;
     }
+    
     .title {
         font-size: 1.5rem;
         border-bottom: 5px solid yellowgreen;
+        padding-bottom: 5px;
     }
+    
     #btn, #generate {
         width: 100%;
         text-align: center;
         padding: 12px 16px;
+        font-size: 1rem;
     }
+    
     table {
         font-size: 14px;
         width: 100%;
     }
+    
     th, td {
         padding: 8px;
+        font-size: 12px;
+        text-align: center;
+    }
+    
+    #student-img {
+        width: 80px;
+        height: auto;
     }
 }

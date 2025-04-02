@@ -46,4 +46,24 @@ window.onload = () => {
      let url = URL.createObjectURL(file);
       studentImg.src = url;
     }
+
+    let collageLogoInput = document.getElementById('collage-logo-input');
+    let collageLogo = document.getElementById("collagelogo");
+    collageLogoInput.onchange=(event)=>{
+        let files = event.target.files[0];
+        let url = URL.createObjectURL(files);
+        collageLogo.src = url;
+    }
+    // collage Name Input
+    let collageNameInput = document.getElementById('collage-name');
+    collageNameInput.oninput=(event)=>{
+       let collageName = document.getElementById('clg-name');
+        collageName.innerHTML =  event.target.value;        
+    }
+    // Tagline update
+    let tagLineInput = document.getElementById('tag-line-input');
+    tagLineInput.oninput = (event)=>{
+        let tagline = document.getElementById('tagline');
+        tagline.innerHTML = event.target.value;
+    }
 };

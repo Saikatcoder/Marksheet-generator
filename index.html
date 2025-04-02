@@ -26,9 +26,19 @@
                             <label for="" class="underline">Father's Name</label>
                             <input type="text" name="studentName" placeholder="Enter a Name" type="text">
                         </div>
+                    </div>
+                    <div id="form-box">
                         <div class="form-group">
-                            <label for="" class="underline">Roll Number</label>
-                            <input type="text" name="studentName" placeholder="Enter a Name" type="number">
+                            <label for="" class="underline">Collage Logo</label>
+                            <input  name="collage logo" type="file" accept="image/*" id="collage-logo-input">
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="underline">Collage Name</label>
+                            <input type="text" name="collage Name" placeholder="Collage Name" type="text" id="collage-name">
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="underline">Tag line</label>
+                            <input type="text" name="tagline" placeholder="Lets create Engineer's" type="text" id="tag-line-input">
                         </div>
                     </div>
                     <button id="btn" type="button">
@@ -46,39 +56,64 @@
         <div id="form-card">
             <table width="100%">
                 <tr>
-                    <th width="150" rowspan="2">testing
-                        <img src="https://static.vecteezy.com/system/resources/thumbnails/023/654/784/small_2x/golden-logo-template-free-png.png" alt="" width="100%">
+                    <th width="150" rowspan="2">
+                        <img src="https://static.vecteezy.com/system/resources/thumbnails/023/654/784/small_2x/golden-logo-template-free-png.png" alt="" width="100%" id="collagelogo">
                     </th>
                   <td align="center">
                     <h1 id="clg-name">Sheriyans coding school</h1>
-                    <span>formerly known as west bengal university of technology</span>
+                    <span id="tagline">formerly known as west bengal university of technology</span>
                   </td>
                 </tr>
             </table>
             <table width="100%">
                 <tr>
-                    <th width="150" rowspan="2">
-                        <img src="https://w7.pngwing.com/pngs/340/946/png-transparent-avatar-user-computer-icons-software-developer-avatar-child-face-heroes.png" alt="" width="100%" id="student-img">
+                    <th width="150" rowspan="4">
+                        <img src="https://w7.pngwing.com/pngs/340/946/png-transparent-avatar-user-computer-icons-software-developer-avatar-child-face-heroes.png" alt="student-img" id="student-img">
                     </th>
-                  <td align="center">
-                    <h1 id="clg-name">Sheriyans coding school</h1>
-                    <span>formerly known as west bengal university of technology</span>
-                  </td>
-                </tr>
-            </table>
-            <table  width="100%">
-                <tr>
-                    <th colspan="3" align="right">Total Marks&nbsp;</th>
-                    <td>&nbsp;800</td>
                 </tr>
                 <tr>
-                    <th width="100" align="right">Grade&nbsp;</th>
-                    <td>&nbsp;A+</td>
-                    <th width="140" align="right">percentage&nbsp;</th>
-                    <td width ="100">75%</td>
+                    <th width="130">Student Name</th>
+                    <td>Saikat</td>
+                    <th width="130">Father Name</th>
+                    <td>Saikat</td>
+                </tr>
+                <tr>
+                    <th width="200">Date of Birth</th>
+                    <td>17/01/2222</td>
+                    <th width="200">Gender</th>
+                    <td>Male</td>
+                </tr>
+                <tr>
+                    <th width="200">Depertment</th>
+                    <td>Computer Science</td>
+                    <th width="200">Roll Number</th>
+                    <td>454045</td>
                 </tr>
             </table>
-            
+            <table width="100%">
+                <tr>
+                    <th colspan="3">Subject</th>
+                    <th>Full Marks</th>
+                    <th colspan="2">Obtained Marks</th>
+                </tr>
+                <tr align="center">
+                    <td colspan="3">English</td>
+                    <td>100</td>
+                    <td colspan="2">89</td>
+                </tr>
+                <tr>
+                    <th colspan="5" align="right">Total marks</th>
+                    <td align="center">896</td>
+                </tr>
+                <tr>
+                    <th colspan="2" align="right">Grade</th>
+                    <td align="center">896</td>
+                    <th colspan="2" align="right">Percentage</th>
+                    <td align="center">896</td>
+                </tr>
+            </table>
+            <p class="copyright">Marksheet generator app &copy;By Saikat Dutta(2025), </p>
+            <small class="warning">All right reserved</small>
     </div>
     </div>
     <script src="app.js"></script>
