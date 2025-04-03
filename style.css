@@ -7,6 +7,9 @@ body{
     background-color: black;
     color: #fefefe;
 }
+.main::-webkit-scrollbar{
+    display: none;
+}
 .main{
      width: 100%;
     min-height: 100vh;
@@ -49,7 +52,7 @@ body{
     font-weight: 500;
     color:greenyellow;
 }
-#marsheet-form input{
+#marsheet-form input , #select-gender{
     border: none;
     padding: 10px;
     background-color: transparent;
@@ -57,6 +60,9 @@ body{
     color: #fefefe;
     font-size: 16px;
     flex-grow: 1;
+}
+option{
+    color: black;
 }
 
 .underline{
@@ -113,7 +119,19 @@ th,td{
     text-align: center;
     color: gray;
 }
-
+.delet-btn{
+    border: none;
+    background-color: yellowgreen;
+    fill: red;
+    width:50px;
+    height:45px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.delet-btn:hover{
+    background-color: rgb(117, 179, 24);
+    color:red;
+}
 /* Responsive Design */
 /* Responsive Design */
 @media (max-width: 700px) {
@@ -160,3 +178,4 @@ th,td{
         height: auto;
     }
 }
+

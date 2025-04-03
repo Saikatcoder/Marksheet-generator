@@ -1,3 +1,4 @@
+
 window.onload = () => {
     let addSubjectButton = document.getElementById('btn');
 
@@ -26,16 +27,28 @@ window.onload = () => {
         obtainMarks.placeholder = "Obtained Marks";
         obtainMarks.type = "number";
         obtainMarks.name = "obtainmarks";
-    
+        
 
+        // delete button 
+        let deleteButton = document.createElement('button');
+        deleteButton.innerHTML = `<i class="fa-solid fa-trash"></i>`;
+        deleteButton.className = "delet-btn";
+        deleteButton.type = 'button'
         // Append inputs to subject div
         subjectdiv.append(subjectInput);
         subjectdiv.append(fullMarks);
         subjectdiv.append(obtainMarks);
-
+        subjectdiv.append(deleteButton)
         // Append subject div to form
         let marksheetForm = document.getElementById('dynamic-area');
         marksheetForm.append(subjectdiv);
+
+
+        // delete function
+        deleteButton.onclick=()=>{
+            alert("are you want to delete this form ")
+            subjectdiv.remove()
+        }
     };
 
     // preview student image
@@ -64,6 +77,34 @@ window.onload = () => {
     let tagLineInput = document.getElementById('tag-line-input');
     tagLineInput.oninput = (event)=>{
         let tagline = document.getElementById('tagline');
-        tagline.innerHTML = event.target.value;
+        tagline.innerHTML = `[${event.target.value}]`;
+    }
+    let studentNameInput = document.getElementById('student-name-input')
+    let studentName = document.getElementById('student-name');
+    studentNameInput.oninput =(event)=>{
+        studentName.innerHTML = event.target.value;
+    }
+    let fatherNameInput = document.getElementById('father-name-input');
+    let fatherName = document.getElementById('father-name')
+    fatherNameInput.oninput = (event)=>{
+        fatherName.innerHTML = event.target.value;
+    }
+    // Date of birth
+    let dobInput = document.getElementById('dob-input');
+    let dateOfBirth = document.getElementById('dob')
+    dobInput.onchange =(event)=>{
+        dateOfBirth.innerHTML = event.target.value;
+    }
+    // Gender select
+    let genderInput = document.getElementById('select-gender');
+    let gender =document.getElementById('gender');
+    genderInput.onchange = (event)=>{
+        gender.innerHTML= event.target.value
+    }
+    // collage depertment
+    let depertmentInput = document.getElementById('depertment-input');
+    let depertment = document.getElementById('depertment');
+    depertmentInput.onchange = (event)=>{
+        depertment.innerHTML = event.target.value;
     }
 };

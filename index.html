@@ -13,6 +13,7 @@
         <div id="form-card">
 
                 <form action="" id="marsheet-form">
+
                     <div id="form-box">
                         <div class="form-group">
                             <label for="" class="underline">Student Image</label>
@@ -20,13 +21,14 @@
                         </div>
                         <div class="form-group">
                             <label for="" class="underline">Student's Name</label>
-                            <input type="text" name="studentName" placeholder="Enter a Name" type="text">
+                            <input type="text" name="studentName" placeholder="Enter a Name" type="text" id="student-name-input">
                         </div>
                         <div class="form-group">
                             <label for="" class="underline">Father's Name</label>
-                            <input type="text" name="studentName" placeholder="Enter a Name" type="text">
+                            <input type="text" name="studentName" placeholder="Enter a Name" type="text" id="father-name-input">
                         </div>
                     </div>
+
                     <div id="form-box">
                         <div class="form-group">
                             <label for="" class="underline">Collage Logo</label>
@@ -39,6 +41,28 @@
                         <div class="form-group">
                             <label for="" class="underline">Tag line</label>
                             <input type="text" name="tagline" placeholder="Lets create Engineer's" type="text" id="tag-line-input">
+                        </div>
+                    </div>
+                    <div id="form-box">
+                        <div class="form-group">
+                            <label for="" class="underline">Date of Birth</label>
+                            <input  name="Date of Birth" type="date"  id="dob-input">
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="underline">Gender</label>
+                           <select name="gender" id="select-gender">
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                                <option value="Other">Others</option>
+                           </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="underline">Depertment</label>
+                            <input type="text" name="Depertment" placeholder="computer-science" type="text" id="depertment-input">
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="underline">Roll</label>
+                            <input type="text" name="roll" placeholder="Roll Number" type="number" id="roll-input">
                         </div>
                     </div>
                     <button id="btn" type="button">
@@ -73,19 +97,19 @@
                 </tr>
                 <tr>
                     <th width="130">Student Name</th>
-                    <td>Saikat</td>
+                    <td id="student-name">Saikat</td>
                     <th width="130">Father Name</th>
-                    <td>Saikat</td>
+                    <td id="father-name">Saikat</td>
                 </tr>
                 <tr>
                     <th width="200">Date of Birth</th>
-                    <td>17/01/2222</td>
+                    <td id="dob">17/01/2222</td>
                     <th width="200">Gender</th>
-                    <td>Male</td>
+                    <td id="gender">Male</td>
                 </tr>
                 <tr>
                     <th width="200">Depertment</th>
-                    <td>Computer Science</td>
+                    <td id="depertment">Computer Science</td>
                     <th width="200">Roll Number</th>
                     <td>454045</td>
                 </tr>
