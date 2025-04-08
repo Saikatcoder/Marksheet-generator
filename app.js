@@ -13,7 +13,6 @@ window.onload = () => {
         subjectInput.name = "Subject";
         subjectInput.placeholder = "Subject Name";
         subjectInput.type = "text";
-        
 
         // Full Marks Input
         let fullMarks = document.createElement('input');
@@ -27,7 +26,7 @@ window.onload = () => {
         obtainMarks.placeholder = "Obtained Marks";
         obtainMarks.type = "number";
         obtainMarks.name = "obtainmarks";
-        
+        obtainMarks.className = "obtain-marks";
 
         // delete button 
         let deleteButton = document.createElement('button');
@@ -76,9 +75,20 @@ window.onload = () => {
         fullMarks.oninput=(event)=>{
             fullmarkstd.innerHTML = event.target.value;
         }
-        obtainMarks.oninput=(event)=>{
+        obtainMarks.oninput = (event) => {
             obtainmarkstd.innerHTML = event.target.value;
-        }
+        
+            let totalObtainMarkssum = document.getElementsByClassName('obtain-marks');
+            let sum = 0;
+        
+            for(let i = 0; i < totalObtainMarkssum.length; i++) {
+                let num = Number(totalObtainMarkssum[i].value);
+                if(!isNaN(num)) {
+                    sum += num;
+                }
+            }
+            let totalmarks = document.getElementById("total-marks");
+                totalmarks.innerHTML = sum;
 
 
 
@@ -148,7 +158,5 @@ window.onload = () => {
     depertmentInput.onchange = (event)=>{
         depertment.innerHTML = event.target.value;
     }
-};
-
-
-
+}
+}
