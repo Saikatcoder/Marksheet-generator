@@ -78,9 +78,9 @@ window.onload = () => {
         obtainMarks.oninput = (event) => {
             obtainmarkstd.innerHTML = event.target.value;
         
+            // total marks display
             let totalObtainMarkssum = document.getElementsByClassName('obtain-marks');
             let sum = 0;
-        
             for(let i = 0; i < totalObtainMarkssum.length; i++) {
                 let num = Number(totalObtainMarkssum[i].value);
                 if(!isNaN(num)) {
