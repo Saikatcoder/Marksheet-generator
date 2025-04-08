@@ -39,16 +39,57 @@ window.onload = () => {
         subjectdiv.append(fullMarks);
         subjectdiv.append(obtainMarks);
         subjectdiv.append(deleteButton)
+
         // Append subject div to form
         let marksheetForm = document.getElementById('dynamic-area');
         marksheetForm.append(subjectdiv);
 
 
+
+        let subjecttr = document.createElement('tr');
+         subjecttr.style.textAlign = 'center'
+
+        let subjecttd = document.createElement('td');
+        subjecttd.colSpan = 3;
+
+
+        let fullmarkstd = document.createElement('td');
+        fullmarkstd.innerHTML = 100;
+
+
+        let obtainmarkstd = document.createElement('td');
+        obtainmarkstd.colSpan = 2;
+
+        // let subjectmarkslist = document.getElementById('subjectmarks');
+        subjecttr.append(subjecttd)
+        subjecttr.append(fullmarkstd)
+        subjecttr.append(obtainmarkstd)
+
+        let subjectList = document.getElementById('subject-list')
+        subjectList.append(subjecttr);
+
+
+        // live preview subject marks
+        subjectInput.oninput=(event)=>{
+            subjecttd.innerHTML = event.target.value;
+        }
+        fullMarks.oninput=(event)=>{
+            fullmarkstd.innerHTML = event.target.value;
+        }
+        obtainMarks.oninput=(event)=>{
+            obtainmarkstd.innerHTML = event.target.value;
+        }
+
+
+
         // delete function
         deleteButton.onclick=()=>{
             alert("are you want to delete this form ")
-            subjectdiv.remove()
+            subjectdiv.remove();
+            subjectList.remove();
         }
+
+
     };
 
     // preview student image
@@ -108,3 +149,6 @@ window.onload = () => {
         depertment.innerHTML = event.target.value;
     }
 };
+
+
+
